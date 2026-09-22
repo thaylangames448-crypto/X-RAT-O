@@ -1,0 +1,1409 @@
+/* =========================================================
+   X RATÃO - ESTILO PRINCIPAL
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    background: #ffffff;
+    color: #171717;
+}
+
+.logo-central img{
+    width: 250px;
+    p
+}
+
+.info-cardapio img{
+    width: 450px;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.header {
+    width: 100%;
+    min-height: 110px;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    border-bottom: 2px solid #171717;
+}
+
+
+/* Logo escrita */
+
+.logo-text {
+    position: absolute;
+
+    left: 35px;
+
+    font-size: 42px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* Rato central */
+
+.logo-central {
+    font-size: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   BOTÃO DO MENU
+========================================================= */
+
+.menu-button {
+    position: absolute;
+
+    right: 35px;
+
+    width: 50px;
+    height: 50px;
+
+    background: transparent;
+
+    border: 2px solid #171717;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.menu-button:hover {
+    background: #171717;
+    color: #fff;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu {
+    width: 100%;
+
+    background: #171717;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 45px;
+
+    padding: 15px;
+
+    position: relative;
+
+    z-index: 100;
+}
+
+
+.menu a {
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.menu a:hover {
+    color: #d8c8a8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 550px;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.75),
+            rgba(255, 255, 255, 0.75)
+        ),
+        url("imagens/ratao.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.hero-conteudo {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.pequeno-titulo {
+    font-size: 30px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+
+.hero h1 {
+    font-size: 110px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+
+.botao-sobre {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 12px 30px;
+
+    border: 2px solid #171717;
+
+    color: #171717;
+
+    text-decoration: none;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.botao-sobre:hover {
+    background: #171717;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   SEÇÕES
+========================================================= */
+
+.secao {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 80px 0;
+}
+
+
+.secao h2 {
+    text-align: center;
+
+    font-size: 55px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.linha-decorativa {
+    width: 100px;
+
+    height: 4px;
+
+    background: #171717;
+
+    margin: 15px auto 50px;
+}
+
+
+/* =========================================================
+   AVALIAÇÕES
+========================================================= */
+
+.avaliacoes-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.card-avaliacao {
+    border: 2px solid #171717;
+
+    padding: 30px;
+
+    text-align: center;
+
+    min-height: 220px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+
+.card-avaliacao:hover {
+    transform: translateY(-5px);
+}
+
+
+.estrelas {
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+
+.card-avaliacao p {
+    font-size: 22px;
+
+    line-height: 1.3;
+}
+
+
+.card-avaliacao .cliente {
+    margin-top: 15px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DESTAQUES
+========================================================= */
+
+.destaques {
+    border-top: 2px solid #171717;
+}
+
+
+.destaques-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+.card-destaque {
+    border: 2px solid #171717;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    transition: 0.3s;
+}
+
+
+.card-destaque:hover {
+    transform: translateY(-5px);
+}
+
+
+.imagem-destaque {
+    width: 100%;
+
+    height: 260px;
+
+    overflow: hidden;
+}
+
+
+.imagem-destaque img {
+
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+
+.card-destaque:hover img {
+    transform: scale(1.05);
+}
+
+
+.card-destaque h3 {
+    font-size: 30px;
+
+    margin: 20px 15px 5px;
+}
+
+
+.card-destaque p {
+    font-size: 21px;
+
+    padding: 0 20px 25px;
+}
+
+
+/* =========================================================
+   SOBRE NÓS
+========================================================= */
+
+.imagem-donos {
+    width: 300px;
+
+    max-width: 100%;
+
+    display: block;
+
+    margin: 0 auto 30px;
+
+    border: 2px solid #171717;
+}
+
+
+.texto-sobre {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.texto-sobre p {
+    font-size: 28px;
+
+    line-height: 1.5;
+}
+
+
+.voltar-container {
+    text-align: center;
+
+    margin-top: 40px;
+}
+
+
+/* =========================================================
+   CARDÁPIO
+========================================================= */
+
+.titulo-cardapio {
+    font-size: 38px;
+
+    margin: 50px 0 25px;
+
+    text-align: center;
+}
+
+
+.cardapio-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+
+.item-cardapio {
+    border: 2px solid #171717;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+
+.item-cardapio:hover {
+    transform: translateY(-5px);
+}
+
+
+.item-cardapio > img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.info-cardapio {
+    padding: 25px;
+
+    text-align: center;
+}
+
+
+.info-cardapio h3 {
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+
+.info-cardapio p {
+    font-size: 21px;
+
+    line-height: 1.3;
+
+    margin-bottom: 15px;
+}
+
+
+.info-cardapio strong {
+    font-size: 28px;
+}
+
+
+/* =========================================================
+   GALERIA
+========================================================= */
+
+.galeria-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.foto-galeria {
+    width: 100%;
+
+    height: 280px;
+
+    overflow: hidden;
+
+    border: 2px solid #171717;
+}
+
+
+.foto-galeria img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+
+.foto-galeria:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.footer {
+    background: #171717;
+
+    color: #fff;
+
+    padding: 60px 5% 0;
+
+    text-align: center;
+}
+
+
+.footer h2 {
+    font-size: 45px;
+
+    margin-bottom: 40px;
+}
+
+
+.footer-container {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 60px;
+
+    text-align: left;
+}
+
+
+.footer h3 {
+    font-size: 28px;
+
+    margin: 20px 0 5px;
+}
+
+
+.footer p {
+    font-size: 22px;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   REDES SOCIAIS
+========================================================= */
+
+.redes {
+    text-align: center;
+}
+
+
+.icones-redes {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 20px 0 35px;
+}
+
+
+.icones-redes a {
+    width: 45px;
+
+    height: 45px;
+
+    border: 2px solid #fff;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+
+.icones-redes a:hover {
+    background: #fff;
+
+    color: #171717;
+}
+
+
+.pagamento {
+    font-family: Arial, sans-serif;
+
+    font-size: 15px !important;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.copyright {
+    border-top: 1px solid #555;
+
+    margin-top: 50px;
+
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .avaliacoes-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .destaques-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .cardapio-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .galeria-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    /* CABEÇALHO */
+
+    .header {
+        min-height: 90px;
+    }
+
+
+    .logo-text {
+        left: 15px;
+
+        font-size: 30px;
+    }
+
+
+    .logo-central {
+        font-size: 40px;
+    }
+
+
+    .menu-button {
+        right: 15px;
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 21px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 450px;
+    }
+
+
+    .pequeno-titulo {
+        font-size: 24px;
+    }
+
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+
+    /* SEÇÕES */
+
+    .secao {
+        width: 90%;
+
+        padding: 55px 0;
+    }
+
+
+    .secao h2 {
+        font-size: 42px;
+    }
+
+
+    /* AVALIAÇÕES */
+
+    .avaliacoes-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* DESTAQUES */
+
+    .destaques-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CARDÁPIO */
+
+    .cardapio-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .titulo-cardapio {
+        font-size: 32px;
+    }
+
+
+    /* GALERIA */
+
+    .galeria-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .foto-galeria {
+        height: 300px;
+    }
+
+
+    /* SOBRE */
+
+    .texto-sobre p {
+        font-size: 24px;
+    }
+
+
+    /* RODAPÉ */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+
+
+    .footer h2 {
+        font-size: 38px;
+    }
+
+}
+
+/* =========================================
+   CARRINHO - X RATÃO
+========================================= */
+
+
+/* BOTÃO DO CARRINHO */
+
+.botao-carrinho {
+
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 65px;
+    height: 65px;
+
+    border: 2px solid #171717;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #171717;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.20);
+
+    transition: 0.3s;
+
+}
+
+
+.botao-carrinho:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+/* CONTADOR */
+
+#contador-carrinho {
+
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #171717;
+
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+/* FUNDO ESCURO */
+
+.fundo-carrinho {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.50);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 999;
+
+}
+
+
+.fundo-carrinho.ativo {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* PAINEL DO CARRINHO */
+
+.carrinho {
+
+    position: fixed;
+
+    top: 0;
+    right: -450px;
+
+    width: 430px;
+
+    max-width: 90%;
+
+    height: 100vh;
+
+    background: #ffffff;
+
+    z-index: 1001;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-shadow:
+        -5px 0 25px rgba(0, 0, 0, 0.30);
+
+    transition: 0.4s;
+
+}
+
+
+.carrinho.aberto {
+
+    right: 0;
+
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho-carrinho {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 25px;
+
+    border-bottom: 2px solid #171717;
+
+}
+
+
+.cabecalho-carrinho h2 {
+
+    margin: 0;
+
+    font-size: 25px;
+
+}
+
+
+.fechar-carrinho {
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    line-height: 1;
+
+}
+
+
+/* ITENS */
+
+.itens-carrinho {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 20px;
+
+}
+
+
+.carrinho-vazio {
+
+    text-align: center;
+
+    margin-top: 50px;
+
+    font-size: 20px;
+
+}
+
+
+/* ITEM */
+
+.item-carrinho {
+
+    border-bottom: 1px solid #cccccc;
+
+    padding: 20px 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    gap: 10px;
+
+}
+
+
+.informacoes-item h3 {
+
+    margin: 0;
+
+    font-size: 19px;
+
+}
+
+
+.informacoes-item p {
+
+    margin: 5px 0 0;
+
+    font-size: 16px;
+
+}
+
+
+.controles-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.controles-item button {
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #171717;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+}
+
+
+.controles-item span {
+
+    min-width: 20px;
+
+    text-align: center;
+
+}
+
+
+.subtotal {
+
+    font-size: 17px;
+
+}
+
+
+.remover-item {
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+}
+
+
+/* RODAPÉ DO CARRINHO */
+
+.rodape-carrinho {
+
+    padding: 25px;
+
+    border-top: 2px solid #171717;
+
+}
+
+
+.total-carrinho {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 23px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.finalizar-pedido {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: 2px solid #171717;
+
+    background: #171717;
+
+    color: #ffffff;
+
+    font-family: 'Roboto', sans-serif;
+
+    font-weight: 700;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.finalizar-pedido:hover {
+
+    background: #ffffff;
+
+    color: #171717;
+
+}
+
+
+/* BOTÃO ADICIONAR */
+
+.adicionar-carrinho {
+
+    display: block;
+
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 12px;
+
+    border: 2px solid #171717;
+
+    background: #171717;
+
+    color: #ffffff;
+
+    font-family: 'Roboto', sans-serif;
+
+    font-weight: 700;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.adicionar-carrinho:hover {
+
+    background: #ffffff;
+
+    color: #171717;
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 500px) {
+
+    .carrinho {
+
+        width: 100%;
+
+        max-width: 100%;
+
+    }
+
+
+    .botao-carrinho {
+
+        right: 15px;
+
+        bottom: 15px;
+
+    }
+
+}
+
+
+/* =========================
+   MENU LATERAL X RATÃO
+========================= */
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 320px;
+    height: 100vh;
+    background: #171717;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    z-index: 2000;
+    transition: right 0.4s ease;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.menu.ativo {
+    right: 0;
+}
+
+
+/* TOPO DO MENU */
+
+.menu-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 30px;
+    border-bottom: 1px solid #444;
+}
+
+
+/* NOME X RATÃO */
+
+.menu-topo span {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* BOTÃO X DE FECHAR */
+
+.menu-topo button {
+    background: none;
+    border: none;
+    color: #f00909;
+    font-size: 28px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-left: 100px;
+}
+
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px 25px;
+    border-bottom: 1px solid #333;
+    transition: 0.3s;
+}
+
+
+.menu a:hover {
+    background: #fff;
+    color: #171717;
+    padding-left: 35px;
+}
+
+
+/* Celular */
+
+@media (max-width: 650px) {
+
+    .menu {
+        width: 85%;
+        max-width: 320px;
+    }
+
+    .menu a {
+        font-size: 19px;
+    }
+
+}
+
+
+.logo-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-menu img {
+    width: 55px;
+    height: auto;
+}
+
+.logo-menu span {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+}

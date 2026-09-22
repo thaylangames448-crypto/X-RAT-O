@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Cardápio - X Ratão</title>
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         CARRINHO
+    ========================== -->
+
+    <button
+        class="botao-carrinho"
+        onclick="abrirCarrinho()"
+        aria-label="Abrir carrinho"
+    >
+        🛒
+
+        <span id="contador-carrinho">
+            0
+        </span>
+
+    </button>
+
+
+    <div
+        id="fundo-carrinho"
+        class="fundo-carrinho"
+        onclick="fecharCarrinho()"
+    >
+    </div>
+
+
+    <aside
+        id="carrinho"
+        class="carrinho"
+    >
+
+        <div class="cabecalho-carrinho">
+
+            <h2>
+                🛒 SEU PEDIDO
+            </h2>
+
+            <button
+                onclick="fecharCarrinho()"
+                class="fechar-carrinho"
+                aria-label="Fechar carrinho"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            id="itens-carrinho"
+            class="itens-carrinho"
+        >
+
+            <p class="carrinho-vazio">
+                Seu carrinho está vazio.
+            </p>
+
+        </div>
+
+
+        <div class="rodape-carrinho">
+
+            <div class="total-carrinho">
+
+                <span>
+                    Total:
+                </span>
+
+                <strong id="total-carrinho">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+
+            <button
+                class="finalizar-pedido"
+                onclick="finalizarPedido()"
+            >
+                FINALIZAR PEDIDO
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
+    <header class="header">
+
+        <div class="logo-text">
+            X RATÃO
+        </div>
+
+        <div class="logo-central">
+        </div>
+
+        <button
+            class="menu-button"
+            onclick="abrirMenu()"
+            aria-label="Abrir menu"
+        >
+            ☰
+        </button>
+
+    </header>
+
+
+
+    <!-- =========================
+         MENU
+    ========================== -->
+
+    <nav id="menu" class="menu">
+
+    <div class="menu-topo">
+
+    <div class="logo-menu">
+        <img src="imagens/logo2.png" alt="Logo X Ratão">
+        <span>X RATÃO</span>
+    </div>
+
+    <button onclick="abrirMenu()" aria-label="Fechar menu">
+        ×
+    </button>
+
+</div>
+ </div>
+
+    <a href="index.html">🏠 INÍCIO</a>
+
+    <a href="cardapio.html">🍔 CARDÁPIO</a>
+
+    <a href="cardapio.html">🛒 MEU CARRINHO</a>
+
+    <a href="galeria.html">📸 GALERIA</a>
+
+    <a href="sobre.html">👥 SOBRE NÓS</a>
+
+    <a href="index.html#contato">📞 CONTATO</a>
+
+</nav>
+
+
+    <!-- =========================
+         CARDÁPIO
+    ========================== -->
+
+    <main>
+
+        <section class="secao">
+
+            <h2>
+                NOSSO CARDÁPIO
+            </h2>
+
+            <div class="linha-decorativa">
+            </div>
+
+
+
+            <!-- =========================
+                 HAMBÚRGUERES
+            ========================== -->
+
+            <h3 class="titulo-cardapio">
+                🍔 HAMBÚRGUERES
+            </h3>
+
+
+            <div class="cardapio-container">
+
+
+
+                <!-- X RATÃO -->
+
+                <article class="item-cardapio">
+
+                    <img
+                        src="imagens/artesanal.jpg"
+                        alt="X Ratão"
+                    >
+
+                    <div class="info-cardapio">
+
+                        <h3>
+                            X RATÃO
+                        </h3>
+
+                        <p>
+                            Hambúrguer artesanal da casa
+                            preparado com ingredientes
+                            selecionados.
+                        </p>
+
+                        <strong>
+                            R$ 25,00
+                        </strong>
+
+                        <button
+                            class="adicionar-carrinho"
+                            onclick="adicionarCarrinho('X RATÃO', 25.00)"
+                        >
+                            + ADICIONAR
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- BACON -->
+
+                <article class="item-cardapio">
+
+                    <img
+                        src="imagens/hamburguer.jpg"
+                        alt="Hambúrguer com bacon"
+                    >
+
+                    <div class="info-cardapio">
+
+                        <h3>
+                            X BACON
+                        </h3>
+
+                        <p>
+                            Hambúrguer artesanal com
+                            bacon crocante e queijo.
+                        </p>
+
+                        <strong>
+                            R$ 28,00
+                        </strong>
+
+                        <button
+                            class="adicionar-carrinho"
+                            onclick="adicionarCarrinho('X BACON', 28.00)"
+                        >
+                            + ADICIONAR
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- SALADA -->
+
+                <article class="item-cardapio">
+
+                    <img
+                        src="imagens/xsalada.jpg"
+                        alt="Hambúrguer com salada"
+                    >
+
+                    <div class="info-cardapio">
+
+                        <h3>
+                            X SALADA
+                        </h3>
+
+                        <p>
+                            Hambúrguer artesanal com
+                            queijo, alface, tomate e
+                            ingredientes frescos.
+                        </p>
+
+                        <strong>
+                            R$ 27,00
+                        </strong>
+
+                        <button
+                            class="adicionar-carrinho"
+                            onclick="adicionarCarrinho('X SALADA', 27.00)"
+                        >
+                            + ADICIONAR
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 ACOMPANHAMENTOS
+            ========================== -->
+
+            <h3 class="titulo-cardapio">
+                🍟 ACOMPANHAMENTOS
+            </h3>
+
+
+            <div class="cardapio-container">
+
+
+
+                <!-- BATATA FRITA -->
+
+                <article class="item-cardapio">
+
+                    <div class="info-cardapio">
+
+                        <h3>
+                            BATATA FRITA
+                        </h3>
+
+                        <img
+                            src="imagens/crocante.jpg"
+                            alt="Batata frita"
+                        >
+
+                        <p>
+                            Porção de batatas fritas
+                            crocantes.
+                        </p>
+
+                        <strong>
+                            R$ 15,00
+                        </strong>
+
+                        <button
+                            class="adicionar-carrinho"
+                            onclick="adicionarCarrinho('BATATA FRITA', 15.00)"
+                        >
+                            + ADICIONAR
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- BATATA COM BACON -->
+
+                <article class="item-cardapio">
+
+                    <div class="info-cardapio">
+
+                        <h3>
+                            BATATA COM BACON
+                        </h3>
+
+                        <img
+                            src="imagens/batata.jpg"
+                            alt="Batata com bacon"
+                        >
+
+                        <p>
+                            Batata frita acompanhada
+                            de bacon e queijo.
+                        </p>
+
+                        <strong>
+                            R$ 22,00
+                        </strong>
+
+                        <button
+                            class="adicionar-carrinho"
+                            onclick="adicionarCarrinho('BATATA COM BACON', 22.00)"
+                        >
+                            + ADICIONAR
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 BEBIDAS
+            ========================== -->
+
+            <h3 class="titulo-cardapio">
+                🥤 BEBIDAS
+            </h3>
+
+
+            <div class="cardapio-container">
+
+
+
+                <!-- REFRIGERANTE -->
+
+                <article class="item-cardapio">
+
+                    <div class="info-cardapio">
+
+                        <h3>
+                            REFRIGERANTE
+                        </h3>
+
+                        <img
+                            src="imagens/Refrigerante.jpg"
+                            alt="Refrigerante"
+                        >
+
+                        <p>
+                            Lata de refrigerante.
+                        </p>
+
+                        <strong>
+                            R$ 6,00
+                        </strong>
+
+                        <button
+                            class="adicionar-carrinho"
+                            onclick="adicionarCarrinho('REFRIGERANTE', 6.00)"
+                        >
+                            + ADICIONAR
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- SUCO -->
+
+                <article class="item-cardapio">
+
+                    <div class="info-cardapio">
+
+                        <h3>
+                            SUCO
+                        </h3>
+
+                        <img
+                            src="imagens/suco.png"
+                            alt="Suco"
+                        >
+
+                        <p>
+                            Suco natural.
+                        </p>
+
+                        <strong>
+                            R$ 8,00
+                        </strong>
+
+                        <button
+                            class="adicionar-carrinho"
+                            onclick="adicionarCarrinho('SUCO', 8.00)"
+                        >
+                            + ADICIONAR
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 VOLTAR
+            ========================== -->
+
+            <div class="voltar-container">
+
+                <a
+                    href="index.html"
+                    class="botao-sobre"
+                >
+                    VOLTAR AO INÍCIO
+                </a>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="copyright">
+
+            © 2026 Hamburgueria X Ratão
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
